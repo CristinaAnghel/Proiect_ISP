@@ -13,6 +13,17 @@ public class ProgramareSustinere {
         this.dataSustinerii = dataSustinerii;
     }
 
+
+    public void confirmareSustinere(){
+        System.out.println("S-a sustinut prezentarea temei de licenta cu comisia " + comisie.identificator + " si studentul " + student.nume + " " + student.prenume + " la data de " + dataSustinerii.toString());
+    }
+
+
+    public void stabilireNota(float notaLicenta){
+        comisie.stabilireNota(student, notaLicenta);
+    }
+
+
     public void afisare(){
         System.out.println("Date programare sustinere: ");
         System.out.println("Comisie: " + comisie.identificator);

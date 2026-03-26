@@ -1,9 +1,9 @@
 package org.example;
 
-
-import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.util.concurrent.atomic.AtomicInteger;
 
 abstract class Utilizator {
+    private static final AtomicInteger count = new AtomicInteger(0);
     public String nume, prenume, email, nrTelefon;
     protected int idCont;
 
@@ -12,7 +12,7 @@ abstract class Utilizator {
         this.prenume = prenume;
         this.email = email;
         this.nrTelefon = nrTelefon;
-
+        idCont = count.incrementAndGet();
     }
 
     public void creareCont()   {

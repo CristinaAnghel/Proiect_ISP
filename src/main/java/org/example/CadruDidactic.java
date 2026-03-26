@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CadruDidactic extends Utilizator{
-    public Student[] studentiCoordonati;
+    public List<Student> studentiCoordonati;
     public ComisieIndrumare titlu;
     public TipCoordonator rang;
     public Comisie comisie;
     public List<ProgramareSustinere> programariActive;
 
-    CadruDidactic(String nume, String prenume, String email, String nrTelefon, ComisieIndrumare titlu, TipCoordonator rang, Comisie comisie, Student[] studentiCoordonati){
+    CadruDidactic(String nume, String prenume, String email, String nrTelefon, ComisieIndrumare titlu, TipCoordonator rang, Comisie comisie){
         super(nume, prenume, email, nrTelefon);
-        this.studentiCoordonati = studentiCoordonati;
+        this.studentiCoordonati = new ArrayList<>();
         this.titlu = titlu;
         if(titlu.equals(ComisieIndrumare.CoordonatorStiintific)) {
             this.rang = rang;
@@ -22,6 +22,11 @@ public class CadruDidactic extends Utilizator{
         }
         this.comisie = comisie;
         programariActive = new ArrayList<ProgramareSustinere>();
+    }
+
+
+    public void adaugareStudent(Student student){
+        studentiCoordonati.add(student);
     }
 
 
@@ -50,8 +55,8 @@ public class CadruDidactic extends Utilizator{
         System.out.println("Tip coordonator: " + rang);
         System.out.println("Comisie: " + comisie.identificator);
         System.out.println("Studenti coordonati: ");
-        for (int i = 0; i < studentiCoordonati.length; i++) {
-            System.out.println(studentiCoordonati[i].nume + " " + studentiCoordonati[i].prenume);
+        for (int i = 0; i < studentiCoordonati.size(); i++) {
+            System.out.println(studentiCoordonati.get(i).nume + " " + studentiCoordonati.get(i).prenume);
         }
     }
 

@@ -6,14 +6,14 @@ public class Student extends Utilizator{
     public LucrareDeLicenta licenta;
     private ProgramareSustinere programarePrezentare;
 
-    Student(String nume, String prenume, String email, String nrTelefon, String serie, String grupa, float mediaAnilor, float mediaFinala){
+    Student(String nume, String prenume, String email, String nrTelefon, String serie, String grupa, float mediaAnilor){
         super(nume, prenume, email, nrTelefon);
         this.serie = serie;
         this.grupa = grupa;
         this.mediaAnilor = mediaAnilor;
-        this.mediaFinala = mediaFinala;
-        licenta = null;
-        programarePrezentare = null;
+        this.mediaFinala = -1;
+        this.licenta = null;
+        this.programarePrezentare = null;
     }
 
     public void adaugaProgramare(ProgramareSustinere programare){

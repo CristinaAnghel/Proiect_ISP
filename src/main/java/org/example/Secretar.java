@@ -11,7 +11,7 @@ public class Secretar extends Utilizator{
     Secretar(String nume, String prenume, String email, String nrTelefon, Comisie[] comisiiGestionate){
         super(nume, prenume, email, nrTelefon);
         this.comisiiGestionate = comisiiGestionate;
-        licente = new ArrayList<LucrareDeLicenta>();
+        licente = new ArrayList<>();
     }
 
 
@@ -39,6 +39,9 @@ public class Secretar extends Utilizator{
         if(student.licenta.notat){
             student.mediaFinala = (student.mediaAnilor + student.licenta.getNotaLicenta())/2;
         }
+        else{
+            System.out.println("Licenta nu a fost notata!");
+        }
     }
 
 
@@ -46,6 +49,9 @@ public class Secretar extends Utilizator{
         if(!student.licenta.notat){
             student.licenta.notat = true;
             student.licenta.setNotaLicenta(notaLicenta);
+        }
+        else{
+            System.out.println("Studentul a fost notat deja!");
         }
     }
 

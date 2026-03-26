@@ -11,6 +11,12 @@ public class Comisie {
         this.cadreDidactice = cadreDidactice;
     }
 
+
+    public void stabilireNota(Student student, float notaLicenta){
+        secretar.incarcaNotaLicenta(student, notaLicenta);
+    }
+
+
     public void afisare(){
         System.out.println("Date comisie: ");
         System.out.println("Identificator: " + identificator);

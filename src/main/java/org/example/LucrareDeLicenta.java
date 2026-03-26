@@ -30,6 +30,15 @@ public class LucrareDeLicenta {
         System.out.println("Nota: " + notaLicenta);
     }
 
+    public void vizualizareNota(){
+        if(notat){
+            System.out.println("Nota licentei este: " + notaLicenta);
+        }
+        else{
+            System.out.println("Licenta nu a fost notata");
+        }
+    }
+
     public float getNotaLicenta() {
         return notaLicenta;
     }
