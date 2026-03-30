@@ -33,7 +33,7 @@ public class Student extends Utilizator{
 
 
     public boolean confirmareProgramare(ProgramareSustinere programareSustinere){
-        if(programarePrezentare != null){
+        if(programarePrezentare == null){
             adaugaProgramare(programarePrezentare);
             return true;
         }

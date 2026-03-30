@@ -23,7 +23,7 @@ public class Secretar extends Utilizator{
     }
 
 
-    public void programare(Student student, Comisie comisie, Date data){
+    public ProgramareSustinere programare(Student student, Comisie comisie, Date data){
         ProgramareSustinere programare = new ProgramareSustinere(comisie, student, data);
         boolean resStud = student.confirmareProgramare(programare);
         System.out.println("Studentul a confirmat? " + resStud);
@@ -32,6 +32,8 @@ public class Secretar extends Utilizator{
             boolean resCad = comisie.cadreDidactice[i].confirmareProgramare(programare);
             System.out.println("Cadrul didactic " + comisie.cadreDidactice[i].nume + " " + comisie.cadreDidactice[i].prenume + " a confirmat? " + resCad);
         }
+
+        return programare;
     }
 
 
