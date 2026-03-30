@@ -6,7 +6,6 @@ import java.util.Random;
 public class Antiplagiat {
     public String numeProgram;
     public float acuratete;
-    public LucrareDeLicenta[] toateLucrarile;
     private String pachetUtilizat;
 
 
