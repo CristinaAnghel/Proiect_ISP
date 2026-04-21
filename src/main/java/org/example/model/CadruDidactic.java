@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ public class CadruDidactic extends Utilizator{
     public Comisie comisie;
     public List<ProgramareSustinere> programariActive;
 
-    CadruDidactic(String nume, String prenume, String email, String nrTelefon, ComisieIndrumare titlu, TipCoordonator rang, Comisie comisie){
+    public CadruDidactic(String nume, String prenume, String email, String nrTelefon, ComisieIndrumare titlu, TipCoordonator rang, Comisie comisie){
         super(nume, prenume, email, nrTelefon);
         this.studentiCoordonati = new ArrayList<>();
         this.titlu = titlu;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class ProgramareSustinere {
     public Student student;
     public Date dataSustinerii;
 
-    ProgramareSustinere(Comisie comisie, Student student, Date dataSustinerii) {
+    public ProgramareSustinere(Comisie comisie, Student student, Date dataSustinerii) {
         this.comisie = comisie;
         this.student = student;
         this.dataSustinerii = dataSustinerii;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -7,7 +7,7 @@ abstract class Utilizator {
     public String nume, prenume, email, nrTelefon;
     protected int idCont;
 
-    Utilizator(String nume, String prenume, String email, String nrTelefon) {
+    public Utilizator(String nume, String prenume, String email, String nrTelefon) {
         this.nume = nume;
         this.prenume = prenume;
         this.email = email;

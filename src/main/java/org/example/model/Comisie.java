@@ -1,11 +1,11 @@
-package org.example;
+package org.example.model;
 
 public class Comisie {
     public CadruDidactic[] cadreDidactice;
     public int identificator;
     public Secretar secretar;
 
-    Comisie(int identificator, Secretar secretar, CadruDidactic[] cadreDidactice){
+    public Comisie(int identificator, Secretar secretar, CadruDidactic[] cadreDidactice){
         this.identificator = identificator;
         this.secretar = secretar;
         this.cadreDidactice = cadreDidactice;

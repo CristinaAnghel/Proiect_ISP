@@ -1,9 +1,9 @@
-package org.example;
+package org.example.model;
 
 public class Validator {
     public String numeProgram;
 
-    Validator(String numeProgram) {
+    public Validator(String numeProgram) {
         this.numeProgram=numeProgram;
     }
 

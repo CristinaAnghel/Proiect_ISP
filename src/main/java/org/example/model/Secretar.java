@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +8,7 @@ public class Secretar extends Utilizator{
     public Comisie[] comisiiGestionate;
     public List<LucrareDeLicenta> licente;
 
-    Secretar(String nume, String prenume, String email, String nrTelefon, Comisie[] comisiiGestionate){
+    public Secretar(String nume, String prenume, String email, String nrTelefon, Comisie[] comisiiGestionate){
         super(nume, prenume, email, nrTelefon);
         this.comisiiGestionate = comisiiGestionate;
         licente = new ArrayList<>();

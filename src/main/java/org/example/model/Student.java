@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 public class Student extends Utilizator{
     public String serie, grupa;
@@ -6,7 +6,7 @@ public class Student extends Utilizator{
     public LucrareDeLicenta licenta;
     private ProgramareSustinere programarePrezentare;
 
-    Student(String nume, String prenume, String email, String nrTelefon, String serie, String grupa, float mediaAnilor){
+    public Student(String nume, String prenume, String email, String nrTelefon, String serie, String grupa, float mediaAnilor){
         super(nume, prenume, email, nrTelefon);
         this.serie = serie;
         this.grupa = grupa;
@@ -34,7 +34,7 @@ public class Student extends Utilizator{
 
     public boolean confirmareProgramare(ProgramareSustinere programareSustinere){
         if(programarePrezentare == null){
-            adaugaProgramare(programarePrezentare);
+            adaugaProgramare(programareSustinere);
             return true;
         }
 

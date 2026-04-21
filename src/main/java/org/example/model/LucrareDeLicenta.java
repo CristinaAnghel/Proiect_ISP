@@ -1,6 +1,4 @@
-package org.example;
-
-import javax.sound.midi.SysexMessage;
+package org.example.model;
 
 public class LucrareDeLicenta {
     public String titlu;
@@ -10,7 +8,7 @@ public class LucrareDeLicenta {
     public boolean notat;
     private boolean valida;
 
-    LucrareDeLicenta(String titlu, CadruDidactic[] coordonatori) {
+    public LucrareDeLicenta(String titlu, CadruDidactic[] coordonatori) {
         this.titlu = titlu;
         this.coordonatori = coordonatori;
         this.scorAntiplagiat = null;

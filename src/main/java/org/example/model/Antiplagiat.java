@@ -1,6 +1,4 @@
-package org.example;
-import java.util.ArrayList;
-import java.util.List;
+package org.example.model;
 import java.util.Random;
 
 public class Antiplagiat {
@@ -9,7 +7,7 @@ public class Antiplagiat {
     private String pachetUtilizat;
 
 
-    Antiplagiat(String numeProgram,  float acuratete, String pachetUtilizat) {
+    public Antiplagiat(String numeProgram,  float acuratete, String pachetUtilizat) {
         this.numeProgram = numeProgram;
         this.acuratete = acuratete;
         this.pachetUtilizat = pachetUtilizat;
