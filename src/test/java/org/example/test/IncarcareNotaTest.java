@@ -11,7 +11,7 @@ public class IncarcareNotaTest {
     private Comisie comisie;
     private Validator validator;
 
-    @BeforeEach
+    @BeforeEach // creeaza obiectele de fiecare data pentru fiecare test, pentru a nu se incurca cu date vechi
     void setup(){
         secretar = new Secretar("Popescu", "Ion", "ion@secretariat.ro", "0753837541", new Comisie[0]);
         comisie = new Comisie(1, secretar, new CadruDidactic[0]);
@@ -28,7 +28,15 @@ public class IncarcareNotaTest {
         secretar.incarcareNotaStudent(student);
         validator.validareNota(student);
 
+        // assertEquals(valoareAsteptata, valoareObtinuta, delta, mesaj)
+        // delta e marja de eroare - pentru numerele cu virgula, daca diferenta dintre 2 numere
+        // este mai mica de 0.01 numerele sunt considerate egale
+        // mesajul apare pe ecran atunci cand testul pica
         assertEquals(8.50f, student.mediaFinala, 0.01);
+
+        // assertTrue(conditie, "Mesaj optional")
+        // verifica daca o conditie logica este adevarata, daca este falsa, testul pica
+        // mesajul optional se afiseaza doar daca testul pica
         assertTrue(student.mediaFinala >= 5, "Studentul ar trebui sa fie admis.");
     }
 
@@ -70,6 +78,8 @@ public class IncarcareNotaTest {
         secretar.incarcareNotaStudent(student);
 
         assertEquals(4.50f, student.mediaFinala, 0.01);
+
+        // assertFalse(conditie, "Mesaj optional") - se asigura ca o conditie este obligatoriu falsa
         assertFalse(student.mediaFinala >= 5, "Media sub 5.00 trebuie sa fie respinsa.");
     }
 
